@@ -1,12 +1,23 @@
-import Navbar from './components/Navbar'
+import React, { useRef } from 'react';
+import Navbar from './components/TempNavbar';
+import Book from './components/Book';
 import './style/App.css';
-import './style/index.css'
 
 function App() {
-  return (
-  <div> <Navbar/>
+  const bookRef = useRef();
 
-    </div> 
-  )
+  const goToPage = (pageNumber) => {
+    if (bookRef.current) {
+      bookRef.current.pageFlip().flip(pageNumber);
+    }
+  };
+
+  return (
+    <div className="App">
+      <Navbar onNavigate={goToPage} />
+      <Book ref={bookRef} />
+    </div>
+  );
 }
+
 export default App;
