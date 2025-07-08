@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import Navbar from './components/TempNavbar';
 import Book from './components/Book';
 import './style/App.css';
 
@@ -14,7 +13,6 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar onNavigate={goToPage} />
       <Book ref={bookRef} />
     </div>
   );
