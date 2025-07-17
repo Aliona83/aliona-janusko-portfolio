@@ -15,7 +15,7 @@ code {
 
 .page:first-child {
   background-color: #111;
-  color: rgb(230, 25, 25);
+  color: white;
   font-family: 'Georgia', serif;
   display: flex;
   flex-direction: column;
