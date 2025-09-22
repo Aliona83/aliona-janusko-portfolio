@@ -29,8 +29,10 @@ const App: React.FC = () => {
         <section id="navigation" className="container center">
           <a className="btn" href="#projects">Projects</a>
           <a className="btn" href="#skills">Skills</a>
-          <a className="btn" href="/cv.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-          <a className="btn" href="#contact">Contact</a>
+          <a className="btn" href={`${import.meta.env.BASE_URL}cv.pdf`} download>
+            Download CV
+          </a>
+                    <a className="btn" href="#contact">Contact</a>
         </section>
 
         {/* Projects */}
