@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css"; 
-
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPython } from "react-icons/fa";
+import { SiDjango, SiPostgresql, SiPython, SiDocker, SiAmazon } from "react-icons/si";
 const App: React.FC = () => {
   const year = new Date().getFullYear();
 
@@ -19,9 +20,11 @@ const App: React.FC = () => {
         <section id="about" className="container">
           <h2>About Me</h2>
           <p>
-            Hello! I'm passionate about creating modern, user-friendly websites
-            and applications. I enjoy learning new technologies and building
-            creative solutions.
+                    I’m a Junior Backend Developer and a current postgraduate student in
+            Computer Science (AI & Machine Learning). I specialize in building scalable
+            and efficient backend systems with Django, REST APIs, and PostgreSQL. I
+            enjoy solving problems with clean code, working with cloud technologies
+            like AWS, and continuously learning to grow as a developer.
           </p>
         </section>
 
@@ -43,29 +46,33 @@ const App: React.FC = () => {
 
         {/* Skills */}
         <section id="skills" className="container">
-          <h2>Skills</h2>
-          <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>React, Node.js</li>
-            <li>UI/UX Design</li>
-          </ul>
-        </section>
+  <h2>Skills</h2>
+  <div className="skills-grid">
+    <div className="skill-card"><FaPython size={40} /> <p>Python</p></div>
+    <div className="skill-card"><SiDjango size={40} /> <p>Django</p></div>
+    <div className="skill-card"><SiPostgresql size={40} /> <p>PostgreSQL</p></div>
+    <div className="skill-card"><SiDocker size={40} /> <p>Docker</p></div>
+    <div className="skill-card"><SiAmazon size={40} /> <p>AWS</p></div>
+    <div className="skill-card"><FaReact size={40} /> <p>React</p></div>
+    <div className="skill-card"><FaNodeJs size={40} /> <p>Node.js</p></div>
+  </div>
+</section>
 
         {/* Contact */}
         <section id="contact" className="container">
           <h2>Contact</h2>
           <p>
             Email:{" "}
-            <a href="mailto:you@example.com">you@example.com</a>
+            <a href="mailto:alionajanusko@gmail.com">alionajanusko@gmail.com</a>
           </p>
           <p>
             LinkedIn:{" "}
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/aliona-janusko/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              linkedin.com/in/yourusername
+              linkedin.com/in/aliona-janusko/
             </a>
           </p>
         </section>
@@ -73,7 +80,7 @@ const App: React.FC = () => {
 
       {/* Footer */}
       <footer>
-        <div className="container small">© {year} Your Name</div>
+        <div className="container small">© {year} Aliona Janusko</div>
       </footer>
     </>
   );

@@ -120,24 +120,27 @@ footer {
   gap: 20px;
   text-align: left;
 }
-
-/* Logo */
-.logo {
-  height: 60px;
-  width: auto;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
 }
 
-/* Text stays responsive */
-.header-text {
-  flex: 1;
+.skill-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
 }
 
-/* Option A: Logo on LEFT, text on RIGHT (default above) */
-.header-flex {
-  flex-direction: row;
+.skill-card:hover {
+  transform: translateY(-5px);
 }
 
-/* Option B: Logo on RIGHT, text on LEFT */
-/* .header-flex.reverse {
-  flex-direction: row-reverse;
-} */
+.skill-card p {
+  margin-top: 10px;
+  font-weight: bold;
+}
