@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css"; 
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPython } from "react-icons/fa";
-import { SiDjango, SiPostgresql, SiPython, SiDocker, SiAmazon } from "react-icons/si";
+import { SiDjango, SiPostgresql, SiAmazon, SiPandas, SiPlotly } from "react-icons/si";
+import { FaPython, FaDocker, FaGitAlt } from "react-icons/fa";
 const App: React.FC = () => {
   const year = new Date().getFullYear();
 
@@ -47,14 +47,27 @@ const App: React.FC = () => {
         {/* Skills */}
         <section id="skills" className="container">
   <h2>Skills</h2>
+  <h3>Languages & Databases</h3>
   <div className="skills-grid">
-    <div className="skill-card"><FaPython size={40} /> <p>Python</p></div>
-    <div className="skill-card"><SiDjango size={40} /> <p>Django</p></div>
-    <div className="skill-card"><SiPostgresql size={40} /> <p>PostgreSQL</p></div>
-    <div className="skill-card"><SiDocker size={40} /> <p>Docker</p></div>
-    <div className="skill-card"><SiAmazon size={40} /> <p>AWS</p></div>
-    <div className="skill-card"><FaReact size={40} /> <p>React</p></div>
-    <div className="skill-card"><FaNodeJs size={40} /> <p>Node.js</p></div>
+    <div className="skill-card"><FaPython size={40} /><p>Python</p></div>
+    <div className="skill-card"><SiPostgresql size={40} /><p>PostgreSQL</p></div>
+    <div className="skill-card"><p>SQL</p></div>
+  </div>
+
+  <h3>Frameworks & Tools</h3>
+  <div className="skills-grid">
+    <div className="skill-card"><SiDjango size={40} /><p>Django / REST API</p></div>
+    <div className="skill-card"><SiPandas size={40} /><p>Pandas</p></div>
+    <div className="skill-card"><SiPlotly size={40} /><p>Plotly</p></div>
+    <div className="skill-card"><FaDocker size={40} /><p>Docker</p></div>
+    <div className="skill-card"><FaGitAlt size={40} /><p>Git & GitHub</p></div>
+  </div>
+
+  <h3>Currently Learning</h3>
+  <div className="skills-grid">
+    <div className="skill-card"><SiAmazon size={40} /><p>AWS</p></div>
+    <div className="skill-card"><p>AI & Machine Learning</p></div>
+    <div className="skill-card"><p>CI/CD (Azure DevOps)</p></div>
   </div>
 </section>
 
