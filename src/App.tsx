@@ -40,9 +40,61 @@ const App: React.FC = () => {
 
         {/* Projects */}
         <section id="projects" className="container">
-          <h2>Projects</h2>
-          <p>Coming soon...</p>
-        </section>
+  <h2>Projects</h2>
+  <div className="projects-grid">
+
+    <div className="project-card">
+      <h3>Task Managment</h3>
+      <img src="task-managment.png" alt="Project 1 Screenshot" />
+      <p>Personal project</p>
+      <a href="https://github.com/Aliona83/project-one" target="_blank" rel="noopener noreferrer">
+        View on GitHub
+      </a>
+    </div>
+
+    <div className="project-card">
+       <h3>Recipe App</h3>
+      <img src="recipe-app.png" alt="Recipe App Screenshot" />
+     <img 
+      src="code-institute.png" 
+      alt="Code Institute Logo" 
+      style={{ width: "124px", height: "auto" }} 
+    />
+      <a href="https://github.com/Aliona83/project-two" target="_blank" rel="noopener noreferrer">
+        View on GitHub
+      </a>
+    </div>
+
+    <div className="project-card">
+      <h3>Elegancy Jewellery</h3>
+      <img src="e-commerce.png" alt="E-commerce Screenshot" />
+       <img 
+      src="code-institute.png" 
+      alt="Code Institute Logo" 
+      style={{ width: "124px", height: "auto" }} 
+    />
+      <a href="https://github.com/Aliona83/project-three" target="_blank" rel="noopener noreferrer">
+        View on GitHub
+      </a>
+    </div>
+
+    <div className="project-card">
+      <h3>Mentors Dashboard</h3>
+      <img src="visualisation.png" alt="Mentors Dashboard Screenshot" />
+       <img 
+      src="unimenty.png" 
+      alt="Code Institute Logo" 
+      style={{ width: "124px", height: "auto" }} 
+    />
+      <a href="https://github.com/Aliona83/project-four" target="_blank" rel="noopener noreferrer">
+        View on GitHub
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
 
         {/* Skills */}
         <section id="skills" className="container">
@@ -87,6 +139,10 @@ const App: React.FC = () => {
             >
               linkedin.com/in/aliona-janusko/
             </a>
+          </p>
+          <p>
+            GitHub:{" "}
+            <a href="https://github.com/Aliona83/">https://github.com/Aliona83/</a>
           </p>
         </section>
       </main>
