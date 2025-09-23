@@ -1,153 +1,164 @@
 import React from "react";
-import "./index.css"; 
+import "./index.css";
+
+// Icons
+import { FaPython, FaDocker, FaGitAlt, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiDjango, SiPostgresql, SiAmazon, SiPandas, SiPlotly } from "react-icons/si";
-import { FaPython, FaDocker, FaGitAlt } from "react-icons/fa";
+
 const App: React.FC = () => {
   const year = new Date().getFullYear();
+  const baseUrl = import.meta.env.BASE_URL; 
 
   return (
     <>
-    
       <header>
         <div className="container">
           <h1>Hi, I'm Aliona Janusko</h1>
-          <p> Backend Developer | Python | Django </p>
+          <p>Backend Developer | Python | Django</p>
         </div>
       </header>
 
       <main>
-        {/* About Section */}
+        {/* About */}
         <section id="about" className="container">
           <h2>About Me</h2>
           <p>
-                    I’m a Junior Backend Developer and a current postgraduate student in
-            Computer Science (AI & Machine Learning). I specialize in building scalable
-            and efficient backend systems with Django, REST APIs, and PostgreSQL. I
-            enjoy solving problems with clean code, working with cloud technologies
-            like AWS, and continuously learning to grow as a developer.
+             I’m a Junior Backend Developer and postgraduate student in Computer Science 
+  (AI & Machine Learning). I build scalable backend systems with Django, REST APIs, 
+  and PostgreSQL, while exploring cloud technologies like AWS and Docker. 
+  Passionate about clean code and continuous learning, I enjoy turning ideas 
+  into impactful solutions.
           </p>
         </section>
 
-        {/* Navigation Buttons */}
+        {/* Nav buttons */}
         <section id="navigation" className="container center">
           <a className="btn" href="#projects">Projects</a>
           <a className="btn" href="#skills">Skills</a>
-          <a className="btn" href={`${import.meta.env.BASE_URL}cv.pdf`} download>
-            Download CV
-          </a>
-                    <a className="btn" href="#contact">Contact</a>
+          <a className="btn" href={`${baseUrl}cv.pdf`} download>Download CV</a>
+          <a className="btn" href="#contact">Contact</a>
         </section>
 
-        {/* Projects */}
-        <section id="projects" className="container">
+       {/* Projects */}
+<section id="projects" className="container">
   <h2>Projects</h2>
   <div className="projects-grid">
-
+    {/* Project 1 */}
     <div className="project-card">
-      <h3>Task Managment</h3>
-      <img src="task-managment.png" alt="Project 1 Screenshot" />
-      <p>Personal project</p>
-      <a href="https://github.com/Aliona83/project-one" target="_blank" rel="noopener noreferrer">
-        View on GitHub
-      </a>
+      <h3>Task Management</h3>
+      <img src={`${baseUrl}task-managment.png`} alt="Task Management app dashboard" />
+      <div className="project-meta">
+        <span>Personal Project</span>
+      </div>
+      <div className="project-buttons">
+        <a href="https://github.com/Aliona83/task_manager_project" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+        <a href="https://task-manager-project-mwar.onrender.com/login/?next=/" target="_blank" rel="noopener noreferrer">
+          Live Demo
+        </a>
+      </div>
     </div>
 
+    {/* Project 2 */}
     <div className="project-card">
-       <h3>Recipe App</h3>
-      <img src="recipe-app.png" alt="Recipe App Screenshot" />
-     <img 
-      src="code-institute.png" 
-      alt="Code Institute Logo" 
-      style={{ width: "124px", height: "auto" }} 
-    />
-      <a href="https://github.com/Aliona83/project-two" target="_blank" rel="noopener noreferrer">
-        View on GitHub
-      </a>
+      <h3>Recipe App</h3>
+      <img src={`${baseUrl}recipe-app.png`} alt="Recipe App responsive screens" />
+      <div className="project-meta">
+        <img src={`${baseUrl}code-institute.png`} alt="Code Institute logo" style={{ width: 100, height: "auto" }} />
+      </div>
+      <div className="project-buttons">
+        <a href="https://github.com/Aliona83/project4--test" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+        <a href="https://your-recipe-demo-link.com" target="_blank" rel="noopener noreferrer">
+          Live Demo
+        </a>
+      </div>
     </div>
 
+    {/* Project 3 */}
     <div className="project-card">
       <h3>Elegancy Jewellery</h3>
-      <img src="e-commerce.png" alt="E-commerce Screenshot" />
-       <img 
-      src="code-institute.png" 
-      alt="Code Institute Logo" 
-      style={{ width: "124px", height: "auto" }} 
-    />
-      <a href="https://github.com/Aliona83/project-three" target="_blank" rel="noopener noreferrer">
-        View on GitHub
-      </a>
+      <img src={`${baseUrl}e-commerce.png`} alt="Elegancy Jewellery e-commerce UI" />
+      <div className="project-meta">
+        <img src={`${baseUrl}code-institute.png`} alt="Code Institute logo" style={{ width: 100, height: "auto" }} />
+      </div>
+      <div className="project-buttons">
+        <a href="https://github.com/Aliona83/project_j" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+        <a href="https://your-ecommerce-demo-link.com" target="_blank" rel="noopener noreferrer">
+          Live Demo
+        </a>
+      </div>
     </div>
 
+    {/* Project 4 */}
     <div className="project-card">
       <h3>Mentors Dashboard</h3>
-      <img src="visualisation.png" alt="Mentors Dashboard Screenshot" />
-       <img 
-      src="unimenty.png" 
-      alt="Code Institute Logo" 
-      style={{ width: "124px", height: "auto" }} 
-    />
-      <a href="https://github.com/Aliona83/project-four" target="_blank" rel="noopener noreferrer">
-        View on GitHub
-      </a>
+      <img src={`${baseUrl}visualisation.png`} alt="Mentors analytics dashboard" />
+      <div className="project-meta">
+        <img src={`${baseUrl}unimenty.png`} alt="Unimenty logo" style={{ width: 100, height: "auto" }} />
+      </div>
+      <div className="project-buttons">
+        <a href="https://github.com/Unicoach/unicoach-backend" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+        <a href="https://your-dashboard-demo-link.com" target="_blank" rel="noopener noreferrer">
+          Live Demo
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  {/* Skills */}
+  <section id="skills" className="container">
+    <h2>Skills</h2>
+
+    <h3>Languages & Databases</h3>
+    <div className="skills-grid">
+      <div className="skill-card"><FaPython size={40} /><p>Python</p></div>
+      <div className="skill-card"><SiPostgresql size={40} /><p>PostgreSQL</p></div>
+      <div className="skill-card"><p>SQL</p></div>
     </div>
 
-  </div>
-</section>
+    <h3>Frameworks & Tools</h3>
+    <div className="skills-grid">
+      <div className="skill-card"><SiDjango size={40} /><p>Django / REST API</p></div>
+      <div className="skill-card"><SiPandas size={40} /><p>Pandas</p></div>
+      <div className="skill-card"><SiPlotly size={40} /><p>Plotly</p></div>
+      <div className="skill-card"><FaDocker size={40} /><p>Docker</p></div>
+      <div className="skill-card"><FaGitAlt size={40} /><p>Git & GitHub</p></div>
+    </div>
 
+    <h3>Currently Learning</h3>
+    <div className="skills-grid">
+      <div className="skill-card"><SiAmazon size={40} /><p>AWS</p></div>
+      <div className="skill-card"><p>AI & Machine Learning</p></div>
+      <div className="skill-card"><p>CI/CD (Azure DevOps)</p></div>
+    </div>
+  </section>
 
-
-        {/* Skills */}
-        <section id="skills" className="container">
-  <h2>Skills</h2>
-  <h3>Languages & Databases</h3>
-  <div className="skills-grid">
-    <div className="skill-card"><FaPython size={40} /><p>Python</p></div>
-    <div className="skill-card"><SiPostgresql size={40} /><p>PostgreSQL</p></div>
-    <div className="skill-card"><p>SQL</p></div>
-  </div>
-
-  <h3>Frameworks & Tools</h3>
-  <div className="skills-grid">
-    <div className="skill-card"><SiDjango size={40} /><p>Django / REST API</p></div>
-    <div className="skill-card"><SiPandas size={40} /><p>Pandas</p></div>
-    <div className="skill-card"><SiPlotly size={40} /><p>Plotly</p></div>
-    <div className="skill-card"><FaDocker size={40} /><p>Docker</p></div>
-    <div className="skill-card"><FaGitAlt size={40} /><p>Git & GitHub</p></div>
-  </div>
-
-  <h3>Currently Learning</h3>
-  <div className="skills-grid">
-    <div className="skill-card"><SiAmazon size={40} /><p>AWS</p></div>
-    <div className="skill-card"><p>AI & Machine Learning</p></div>
-    <div className="skill-card"><p>CI/CD (Azure DevOps)</p></div>
-  </div>
-</section>
-
-        {/* Contact */}
-        <section id="contact" className="container">
-          <h2>Contact</h2>
-          <p>
-            Email:{" "}
-            <a href="mailto:alionajanusko@gmail.com">alionajanusko@gmail.com</a>
-          </p>
-          <p>
-            LinkedIn:{" "}
-            <a
-              href="https://www.linkedin.com/in/aliona-janusko/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              linkedin.com/in/aliona-janusko/
-            </a>
-          </p>
-          <p>
-            GitHub:{" "}
-            <a href="https://github.com/Aliona83/">https://github.com/Aliona83/</a>
-          </p>
-        </section>
+  {/* Contact */}
+  <section id="contact" className="container">
+    <h2>Contact</h2>
+    <div className="contact-inline">
+      <a href="mailto:alionajanusko@gmail.com" target="_blank" rel="noopener noreferrer">
+        <FaEnvelope /> alionajanusko@gmail.com
+      </a>
+      <a href="https://linkedin.com/in/aliona-janusko" target="_blank" rel="noopener noreferrer">
+        <FaLinkedin /> linkedin.com/in/aliona-janusko
+      </a>
+      <a href="https://github.com/Aliona83" target="_blank" rel="noopener noreferrer">
+        <FaGithub /> github.com/Aliona83
+      </a>
+    </div>
+  </section>
       </main>
 
-      {/* Footer */}
       <footer>
         <div className="container small">© {year} Aliona Janusko</div>
       </footer>
